@@ -8,5 +8,6 @@ const kSecondaryTextColor = Color(0xff9FA5C0);
 
 const kOutlineColor = Color(0xffD0DBEA);
 const kFormColor = Color(0xffF4F5F7);
+const kSignInButtonColor = Color(0xffFF5842);
 
 const kDefaultPadding = 20.0;
