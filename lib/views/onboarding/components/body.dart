@@ -24,11 +24,7 @@ class Body extends StatelessWidget {
                 children: [
                   Text(
                     "Start Cooking",
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: kTextColor,
-                    ),
+                    style: headingTitleStyle,
                   ),
                   SizedBox(height: 15),
                   Text(

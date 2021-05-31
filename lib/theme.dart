@@ -27,6 +27,9 @@ InputDecorationTheme inputDecorationTheme() {
       borderSide: BorderSide(color: kPrimaryColor),
       gapPadding: kDefaultPadding,
     ),
+    hintStyle: TextStyle(
+      color: kSecondaryTextColor,
+    ),
   );
 }
 

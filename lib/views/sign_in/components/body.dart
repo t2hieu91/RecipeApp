@@ -14,25 +14,16 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: [
               SizedBox(height: kDefaultPadding * 5),
               Text(
                 "Welcome Back!",
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: kTextColor,
-                ),
+                style: headingTitleStyle,
               ),
               SizedBox(height: kDefaultPadding),
               Text(
                 "Please enter your account here",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: kSecondaryTextColor,
-                ),
-                textAlign: TextAlign.center,
+                style: headingBodyStyle,
               ),
               SizedBox(height: kDefaultPadding * 2),
               TextFormField(
@@ -78,10 +69,7 @@ class Body extends StatelessWidget {
               SizedBox(height: kDefaultPadding),
               Text(
                 "Or continue with",
-                style: TextStyle(
-                  fontSize: 15,
-                  color: kSecondaryTextColor,
-                ),
+                style: headingBodyStyle,
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: kDefaultPadding),
@@ -95,11 +83,7 @@ class Body extends StatelessWidget {
                 children: [
                   Text(
                     "Don’t have any account?",
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: kTextColor,
-                    ),
-                    textAlign: TextAlign.center,
+                    style: headingBodyStyle,
                   ),
                   TextButton(
                     onPressed: () {
