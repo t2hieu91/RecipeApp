@@ -4,6 +4,7 @@ import 'package:recipe_app/components/custom_suffix_icon.dart';
 import 'package:recipe_app/components/default_button.dart';
 import 'package:recipe_app/components/other_button.dart';
 import 'package:recipe_app/constants.dart';
+import 'package:recipe_app/views/password_recovery/password_recovery_screen.dart';
 import 'package:recipe_app/views/sign_up/sign_up_screen.dart';
 
 class Body extends StatelessWidget {
@@ -53,7 +54,10 @@ class Body extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, PasswordRecoveryScreen.routeName);
+                    },
                     child: Text(
                       "Forgot password?",
                       style: TextStyle(color: kTextColor),

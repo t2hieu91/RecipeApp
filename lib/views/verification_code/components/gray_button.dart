@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:recipe_app/constants.dart';
 
-class DefaultButton extends StatelessWidget {
-  const DefaultButton({
+import '../../../constants.dart';
+
+class GrayButton extends StatelessWidget {
+  const GrayButton({
     Key? key,
     required this.title,
     required this.onPress,
@@ -25,15 +26,14 @@ class DefaultButton extends StatelessWidget {
           ),
           side: MaterialStateProperty.all<BorderSide>(
             BorderSide(
-              color: kPrimaryColor,
+              color: kSecondaryTextColor,
             ),
           ),
-          backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
         ),
         onPressed: onPress,
         child: Text(
           title,
-          style: TextStyle(color: Colors.white, fontSize: 17),
+          style: TextStyle(color: kSecondaryTextColor, fontSize: 17),
         ),
       ),
     );

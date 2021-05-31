@@ -23,3 +23,19 @@ final headingBodyStyle = TextStyle(
   fontSize: 15,
   color: kSecondaryTextColor,
 );
+
+final verificationInputDecoration = InputDecoration(
+  contentPadding: EdgeInsets.symmetric(vertical: 15),
+  enabledBorder: outlineInputBorder,
+  border: outlineInputBorder,
+  focusedBorder: OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15),
+    borderSide: BorderSide(color: kPrimaryColor),
+    gapPadding: kDefaultPadding,
+  ),
+);
+
+OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.circular(15),
+  borderSide: BorderSide(color: kOutlineColor),
+);
