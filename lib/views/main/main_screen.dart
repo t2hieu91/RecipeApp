@@ -35,6 +35,12 @@ class _MainScreenState extends State<MainScreen> {
     });
   }
 
+  void _onTabFloatingActionButton() {
+    setState(() {
+      _currentIndex = 2;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,6 +53,12 @@ class _MainScreenState extends State<MainScreen> {
           child: child,
         ),
         child: _screens[_currentIndex],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: IconButton(
+        onPressed: _onTabFloatingActionButton,
+        iconSize: 56.0,
+        icon: Image.asset("assets/icons/ic_scan_bottom_selected.png"),
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onTabTapped,
@@ -73,10 +85,10 @@ class _MainScreenState extends State<MainScreen> {
           ),
           BottomNavigationBarItem(
             icon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_scan_bottom.png",
+              iconPath: "",
             ),
             activeIcon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_scan_bottom_selected.png",
+              iconPath: "",
             ),
             label: "Scan",
           ),

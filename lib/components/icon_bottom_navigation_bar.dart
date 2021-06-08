@@ -10,10 +10,14 @@ class IconBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(
-      iconPath,
-      width: 24.0,
-      height: 24.0,
-    );
+    return iconPath.isNotEmpty
+        ? Image.asset(
+            iconPath,
+            width: 24.0,
+            height: 24.0,
+          )
+        : Container(
+            height: 24.0,
+          );
   }
 }

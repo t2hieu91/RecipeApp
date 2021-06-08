@@ -54,5 +54,7 @@ BottomNavigationBarThemeData bottomNavigationBarThemeData() {
     backgroundColor: Colors.white,
     selectedItemColor: kPrimaryColor,
     unselectedItemColor: kSecondaryTextColor,
+    unselectedLabelStyle: TextStyle(height: 2),
+    selectedLabelStyle: TextStyle(height: 2),
   );
 }
