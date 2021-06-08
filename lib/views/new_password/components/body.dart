@@ -3,6 +3,7 @@ import 'package:recipe_app/components/check_text.dart';
 import 'package:recipe_app/components/custom_prefix_icon.dart';
 import 'package:recipe_app/components/custom_suffix_icon.dart';
 import 'package:recipe_app/components/default_button.dart';
+import 'package:recipe_app/views/main/main_screen.dart';
 
 import '../../../constants.dart';
 
@@ -68,7 +69,10 @@ class Body extends StatelessWidget {
               SizedBox(height: kDefaultPadding * 2),
               DefaultButton(
                 title: "Done",
-                onPress: () {},
+                onPress: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, MainScreen.routeName, (route) => false);
+                },
               ),
               SizedBox(height: kDefaultPadding),
             ],
