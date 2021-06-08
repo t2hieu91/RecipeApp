@@ -1,6 +1,8 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/icon_bottom_navigation_bar.dart';
+
 import '../home_screen/home_screen.dart';
 import '../upload_screen/upload_screen.dart';
 import '../scan_screen/scan_screen.dart';
@@ -49,25 +51,51 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onTabTapped,
         currentIndex: _currentIndex,
+        selectedFontSize: 13.0,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_home_bottom.png",
+            ),
+            activeIcon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_home_bottom_selected.png",
+            ),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.cloud_upload_outlined),
+            icon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_upload_bottom.png",
+            ),
+            activeIcon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_upload_bottom_selected.png",
+            ),
             label: "Upload",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.scatter_plot_outlined),
+            icon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_scan_bottom.png",
+            ),
+            activeIcon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_scan_bottom_selected.png",
+            ),
             label: "Scan",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_active_outlined),
+            icon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_notification_bottom.png",
+            ),
+            activeIcon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_notification_bottom_selected.png",
+            ),
             label: "Notification",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_max_outlined),
+            icon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_profile_bottom.png",
+            ),
+            activeIcon: IconBottomNavigationBar(
+              iconPath: "assets/icons/ic_profile_bottom_selected.png",
+            ),
             label: "Profile",
           ),
         ],
