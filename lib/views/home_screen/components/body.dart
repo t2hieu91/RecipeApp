@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Home Screen"),
+    return SafeArea(
+      child: Center(
+        child: Text("Home Screen"),
+      ),
     );
   }
 }

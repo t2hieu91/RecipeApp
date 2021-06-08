@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/constants.dart';
-import 'package:recipe_app/views/sign_in/sign_in_screen.dart';
+import 'package:recipe_app/views/sign_in_screen/sign_in_screen.dart';
 import '../../../components/default_button.dart';
 
 class Body extends StatelessWidget {
