@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import '../../../constants.dart';
+import './header.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Text("Home Screen"),
+      child: Column(
+        children: [
+          Header(),
+          Container(
+            color: kFormColor,
+            height: 8,
+          ),
+        ],
       ),
     );
   }

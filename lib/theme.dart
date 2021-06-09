@@ -6,9 +6,13 @@ ThemeData theme() {
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
+    textSelectionTheme: textSelectionTheme(),
     bottomNavigationBarTheme: bottomNavigationBarThemeData(),
   );
 }
+
+TextSelectionThemeData textSelectionTheme() =>
+    TextSelectionThemeData(cursorColor: kPrimaryColor);
 
 TextTheme textTheme() {
   return TextTheme(
@@ -20,6 +24,11 @@ TextTheme textTheme() {
     bodyText2: TextStyle(
       fontSize: 17,
       color: kSecondaryTextColor,
+    ),
+    headline2: TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.bold,
+      color: kTextColor,
     ),
   );
 }
