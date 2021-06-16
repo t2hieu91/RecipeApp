@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/routes.dart';
 import 'package:recipe_app/theme.dart';
-import 'package:recipe_app/views/onboarding/on_boarding_screen.dart';
+import 'package:recipe_app/views/onboarding_screen/on_boarding_screen.dart';
 
 void main() {
   runApp(MyApp());

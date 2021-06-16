@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipe_app/components/default_button.dart';
-import 'package:recipe_app/views/new_password/new_password_screen.dart';
+import 'package:recipe_app/views/new_password_screen/new_password_screen.dart';
 import 'package:recipe_app/views/verification_code/components/time_expires.dart';
 import 'package:recipe_app/views/verification_code/components/verification_form.dart';
 import './gray_button.dart';

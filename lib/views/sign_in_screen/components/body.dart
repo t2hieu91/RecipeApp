@@ -5,8 +5,8 @@ import 'package:recipe_app/components/default_button.dart';
 import 'package:recipe_app/components/other_button.dart';
 import 'package:recipe_app/constants.dart';
 import 'package:recipe_app/views/main/main_screen.dart';
-import 'package:recipe_app/views/password_recovery/password_recovery_screen.dart';
-import 'package:recipe_app/views/sign_up/sign_up_screen.dart';
+import 'package:recipe_app/views/password_recovery_screen/password_recovery_screen.dart';
+import 'package:recipe_app/views/sign_up_screen/sign_up_screen.dart';
 
 class Body extends StatelessWidget {
   @override
