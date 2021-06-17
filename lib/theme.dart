@@ -3,6 +3,7 @@ import './constants.dart';
 
 ThemeData theme() {
   return ThemeData(
+    primaryColor: Colors.white,
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
@@ -29,6 +30,10 @@ TextTheme textTheme() {
       fontSize: 17,
       fontWeight: FontWeight.bold,
       color: kTextColor,
+    ),
+    headline3: TextStyle(
+      fontSize: 13,
+      color: kSecondaryTextColor,
     ),
   );
 }

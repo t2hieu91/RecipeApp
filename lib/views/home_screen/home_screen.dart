@@ -6,8 +6,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Body(),
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        body: Body(),
+      ),
     );
   }
 }

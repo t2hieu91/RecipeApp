@@ -54,11 +54,15 @@ class _MainScreenState extends State<MainScreen> {
         ),
         child: _screens[_currentIndex],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: IconButton(
-        onPressed: _onTabFloatingActionButton,
-        iconSize: 56.0,
-        icon: Image.asset("assets/icons/ic_scan_bottom_selected.png"),
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+      floatingActionButton: Visibility(
+        visible: MediaQuery.of(context).viewInsets.bottom == 0.0,
+        child: IconButton(
+          onPressed: _onTabFloatingActionButton,
+          iconSize: 56.0,
+          icon: Image.asset("assets/icons/ic_scan_bottom_selected.png"),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _onTabTapped,
