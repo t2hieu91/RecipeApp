@@ -2,12 +2,15 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/icon_bottom_navigation_bar.dart';
+import '../../constants.dart';
 
 import '../home_screen/home_screen.dart';
 import '../upload_screen/upload_screen.dart';
 import '../scan_screen/scan_screen.dart';
 import '../notification_screen/notification_screen.dart';
 import '../profile_screen/profile_screen.dart';
+
+import './components/scan_option.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -20,6 +23,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
+  final _floatButtonIndex = 2;
 
   final List<Widget> _screens = [
     HomeScreen(),
@@ -37,8 +41,52 @@ class _MainScreenState extends State<MainScreen> {
 
   void _onTabFloatingActionButton() {
     setState(() {
-      _currentIndex = 2;
+      _currentIndex = _floatButtonIndex;
     });
+  }
+
+  void _showModalBottomSheet(BuildContext context) {
+    showModalBottomSheet(
+      backgroundColor: Colors.transparent,
+      context: context,
+      builder: (ctx) => Container(
+        height: (MediaQuery.of(context).size.height / 2) - 30,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(45),
+            topRight: Radius.circular(45),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(35.0),
+          child: Column(
+            children: [
+              Text(
+                "Choose one option",
+                style: headingTitleStyle,
+              ),
+              SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ScanOption(
+                    iconPath: "assets/images/img_food.png",
+                    title: "Food",
+                    onPress: () {},
+                  ),
+                  ScanOption(
+                    iconPath: "assets/images/img_ingredient.png",
+                    title: "Ingredient",
+                    onPress: () {},
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -59,7 +107,8 @@ class _MainScreenState extends State<MainScreen> {
       floatingActionButton: Visibility(
         visible: MediaQuery.of(context).viewInsets.bottom == 0.0,
         child: IconButton(
-          onPressed: _onTabFloatingActionButton,
+          onPressed: () =>
+              _showModalBottomSheet(context), //_onTabFloatingActionButton,
           iconSize: 56.0,
           icon: Image.asset("assets/icons/ic_scan_bottom_selected.png"),
         ),
