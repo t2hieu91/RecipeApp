@@ -16,7 +16,10 @@ class Body extends StatelessWidget {
             height: 8,
           ),
           // the tab bar with two items
-          HeaderTabbar(),
+          HeaderTabbar(
+            item1: "Left",
+            item2: "Right",
+          ),
           // create widgets for each tab bar here
           TabbarView(),
         ],
