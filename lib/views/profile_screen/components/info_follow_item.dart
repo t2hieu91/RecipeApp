@@ -21,7 +21,7 @@ class InfoFollowItem extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           title,
-          style: Theme.of(context).textTheme.headline3,
+          style: Theme.of(context).textTheme.headline4,
         ),
       ],
     );

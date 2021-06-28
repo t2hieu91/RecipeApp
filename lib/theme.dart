@@ -32,6 +32,11 @@ TextTheme textTheme() {
       color: kTextColor,
     ),
     headline3: TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.bold,
+      color: kTextColor,
+    ),
+    headline4: TextStyle(
       fontSize: 13,
       color: kSecondaryTextColor,
     ),
