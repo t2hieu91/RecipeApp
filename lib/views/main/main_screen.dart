@@ -1,16 +1,16 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 
+import '../../components/icon_badge_bottom_navigation_bar.dart';
 import '../../components/icon_bottom_navigation_bar.dart';
 import '../../constants.dart';
+import './components/scan_option.dart';
 
 import '../home_screen/home_screen.dart';
 import '../upload_screen/upload_screen.dart';
 import '../scan_screen/scan_screen.dart';
 import '../notification_screen/notification_screen.dart';
 import '../profile_screen/profile_screen.dart';
-
-import './components/scan_option.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -146,11 +146,13 @@ class _MainScreenState extends State<MainScreen> {
             label: "Scan",
           ),
           BottomNavigationBarItem(
-            icon: IconBottomNavigationBar(
+            icon: IconBadgeBottomNavigationBar(
               iconPath: "assets/icons/ic_notification_bottom.png",
+              number: "3",
             ),
-            activeIcon: IconBottomNavigationBar(
+            activeIcon: IconBadgeBottomNavigationBar(
               iconPath: "assets/icons/ic_notification_bottom_selected.png",
+              number: "0",
             ),
             label: "Notification",
           ),
