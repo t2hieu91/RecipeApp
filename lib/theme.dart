@@ -40,6 +40,11 @@ TextTheme textTheme() {
       fontSize: 13,
       color: kSecondaryTextColor,
     ),
+    headline5: TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.bold,
+      color: kSecondaryColor,
+    ),
   );
 }
 
