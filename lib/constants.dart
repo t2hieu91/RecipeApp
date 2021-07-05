@@ -24,6 +24,12 @@ final headingBodyStyle = TextStyle(
   color: kSecondaryTextColor,
 );
 
+final headingNumberStyle = TextStyle(
+  fontSize: 17,
+  fontWeight: FontWeight.bold,
+  color: kThirtTextColor,
+);
+
 final verificationInputDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 15),
   enabledBorder: outlineInputBorder,

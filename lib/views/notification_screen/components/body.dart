@@ -25,34 +25,31 @@ class _BodyState extends State<Body> {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-        child: Expanded(
-          child: GroupListView(
-            sectionsCount: data.keys.toList().length,
-            countOfItemInSection: (int section) =>
-                data.values.toList()[section].length,
-            groupHeaderBuilder: (ctx, section) => Padding(
-              padding: const EdgeInsets.only(top: kDefaultPadding),
-              child: Text(
-                data.keys.toList()[section],
-                style: Theme.of(context).textTheme.headline2,
-              ),
+        child: GroupListView(
+          sectionsCount: data.keys.toList().length,
+          countOfItemInSection: (int section) =>
+              data.values.toList()[section].length,
+          groupHeaderBuilder: (ctx, section) => Padding(
+            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding),
+            child: Text(
+              data.keys.toList()[section],
+              style: Theme.of(context).textTheme.headline2,
             ),
-            itemBuilder: (ctx, indexPath) {
-              final item =
-                  data.values.toList()[indexPath.section][indexPath.index];
-              return Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: kDefaultPadding / 2),
-                child: NotificationSingleItem(
-                  userAvatarPath: item.userAvatarPath,
-                  userName: item.userName,
-                  itemDescription: item.itemDescription,
-                  isFollow: item.isFollow,
-                  onPressFollow: () => _onPressFollow(indexPath),
-                ),
-              );
-            },
           ),
+          itemBuilder: (ctx, indexPath) {
+            final item =
+                data.values.toList()[indexPath.section][indexPath.index];
+            return NotificationSingleItem(
+              userAvatarPath: item.userAvatarPath,
+              userName: item.userName,
+              itemDescription: item.itemDescription,
+              isFollow: item.isFollow,
+              onPressFollow: () => _onPressFollow(indexPath),
+            );
+          },
+          separatorBuilder: (context, index) =>
+              SizedBox(height: kDefaultPadding),
+          sectionSeparatorBuilder: (context, section) => SizedBox(height: 0),
         ),
       ),
     );
