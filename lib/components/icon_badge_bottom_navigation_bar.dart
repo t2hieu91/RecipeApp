@@ -16,29 +16,30 @@ class IconBadgeBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         IconBottomNavigationBar(
           iconPath: iconPath,
         ),
         if (number.isNotEmpty && int.parse(number) > 0)
           Positioned(
-            right: 0,
-            top: 0,
+            right: -10,
+            top: -5,
             child: Container(
-              // padding: EdgeInsets.all(1.0),
+              padding: EdgeInsets.all(1.0),
               decoration: BoxDecoration(
                 color: kPrimaryColor,
-                borderRadius: BorderRadius.circular(6.0),
+                borderRadius: BorderRadius.circular(8.0),
               ),
               constraints: BoxConstraints(
-                minWidth: 14,
-                minHeight: 14,
+                minWidth: 18,
+                minHeight: 18,
               ),
               child: Text(
                 number,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
                 textAlign: TextAlign.center,
               ),

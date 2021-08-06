@@ -113,59 +113,71 @@ class _MainScreenState extends State<MainScreen> {
           icon: Image.asset("assets/icons/ic_scan_bottom_selected.png"),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: _onTabTapped,
-        currentIndex: _currentIndex,
-        selectedFontSize: 13.0,
-        items: [
-          BottomNavigationBarItem(
-            icon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_home_bottom.png",
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: kPrimaryColor.withOpacity(0.4),
+              blurRadius: 20,
+              spreadRadius: 1,
             ),
-            activeIcon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_home_bottom_selected.png",
+          ],
+        ),
+        child: BottomNavigationBar(
+          onTap: _onTabTapped,
+          currentIndex: _currentIndex,
+          selectedFontSize: 14.0,
+          unselectedFontSize: 13.0,
+          items: [
+            BottomNavigationBarItem(
+              icon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_home_bottom.png",
+              ),
+              activeIcon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_home_bottom_selected.png",
+              ),
+              label: "Home",
             ),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_upload_bottom.png",
+            BottomNavigationBarItem(
+              icon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_upload_bottom.png",
+              ),
+              activeIcon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_upload_bottom_selected.png",
+              ),
+              label: "Upload",
             ),
-            activeIcon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_upload_bottom_selected.png",
+            BottomNavigationBarItem(
+              icon: IconBottomNavigationBar(
+                iconPath: "",
+              ),
+              activeIcon: IconBottomNavigationBar(
+                iconPath: "",
+              ),
+              label: "Scan",
             ),
-            label: "Upload",
-          ),
-          BottomNavigationBarItem(
-            icon: IconBottomNavigationBar(
-              iconPath: "",
+            BottomNavigationBarItem(
+              icon: IconBadgeBottomNavigationBar(
+                iconPath: "assets/icons/ic_notification_bottom.png",
+                number: "3",
+              ),
+              activeIcon: IconBadgeBottomNavigationBar(
+                iconPath: "assets/icons/ic_notification_bottom_selected.png",
+                number: "0",
+              ),
+              label: "Notification",
             ),
-            activeIcon: IconBottomNavigationBar(
-              iconPath: "",
+            BottomNavigationBarItem(
+              icon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_profile_bottom.png",
+              ),
+              activeIcon: IconBottomNavigationBar(
+                iconPath: "assets/icons/ic_profile_bottom_selected.png",
+              ),
+              label: "Profile",
             ),
-            label: "Scan",
-          ),
-          BottomNavigationBarItem(
-            icon: IconBadgeBottomNavigationBar(
-              iconPath: "assets/icons/ic_notification_bottom.png",
-              number: "3",
-            ),
-            activeIcon: IconBadgeBottomNavigationBar(
-              iconPath: "assets/icons/ic_notification_bottom_selected.png",
-              number: "0",
-            ),
-            label: "Notification",
-          ),
-          BottomNavigationBarItem(
-            icon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_profile_bottom.png",
-            ),
-            activeIcon: IconBottomNavigationBar(
-              iconPath: "assets/icons/ic_profile_bottom_selected.png",
-            ),
-            label: "Profile",
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
